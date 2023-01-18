@@ -88,3 +88,9 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+console.log(`Server running in : http://localhost:${port}`);
+
+/* ctrl + click
+en la url q aparece en la terminal para ir a la pagina
+*/

@@ -6,6 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+/* detras del require hay un module.exports
+ctrl + click y nos lleva a la ruta/enrrutador
+*/
 
 var app = express();
 
@@ -19,8 +22,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+/* rutas 
+indexRouter y usersRouter son enrrutadores
+segun la peticion me deriva a un enrrutador
+organizando como index, users, login, register, productos,etc
+
+los enrrutadores ayudan en la comunicacion de las Vistas y Controladores
+sin ruta no hay medio de comunicacion entre ellas
+*/
+app.use('/', indexRouter); //http://localhost:3000 esta url es interpretada por el servidor
+app.use('/users', usersRouter);//http://localhost:3000/users asi lo interpreta
+
+/*  veniamos trabajando asi
+app.use('/', (req,res)=> res.sendFile('rutas absolutas)) 
+
+requiriendo una funcion callback, pero no es una buena practica.
+
+pero ahora no recibe un callback sino que recibe un requerimiento a otro archivo con express generator
+*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
