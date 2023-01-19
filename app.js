@@ -4,8 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const productsRouter = require('./routes/products')
+
 /* detras del require hay un module.exports
 ctrl + click y nos lleva a la ruta/enrrutador
 */
@@ -32,7 +34,7 @@ sin ruta no hay medio de comunicacion entre ellas
 */
 app.use('/', indexRouter); //http://localhost:3000 esta url es interpretada por el servidor
 app.use('/users', usersRouter);//http://localhost:3000/users asi lo interpreta
-
+app.use('/products',productsRouter);//http://localhost:3030/products
 /*  veniamos trabajando asi
 app.use('/', (req,res)=> res.sendFile('rutas absolutas)) 
 
