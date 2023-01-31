@@ -30,7 +30,10 @@
         
     </nav>
     
-    <!-- <ul class="header__nav--menu2">
-           
-          </ul> -->
+    <ul class="header__nav--menu2">
+           <% categories.forEach(({id,name}) => { %>
+            <li><a href="/courses/category/<%= id %> "><%= name %> </a></li>
+            
+           <% }) %>
+          </ul>
   </header>

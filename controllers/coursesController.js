@@ -38,7 +38,7 @@ module.exports = {
         return res.render('courses/list',{
             title:`Producto y su categoria id ${idCategory}`,
             courses:coursesOrder, 
-            categories
+            categories,
         })
     }
     }
