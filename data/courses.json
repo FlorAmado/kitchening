@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "title" : "SUSHI PROFESIONAL",
+        "price" : 10530,
+        "description": "Con una gran experiencia Roberto Nishida te enseña los secretos de las técnicas básicas en la elaboración del sushi, vas a descubrir la importancia de cada ingrediente para que realices una gran variedad de rolls, sashimis y niguiris.",
+        "image": "curso01.webp",
+        "chef": "Roberto Nishida",
+        "categoryId":"c1"
+    },
+    {
+        "id" : 2,
+        "title" : "ABC DE LA COCINA",
+        "price" : 10530,
+        "description": "Tu comida puede transformarse en platos de restaurante de la mano de Guillermo Calabrese que te enseñará a combinar ingredientes simples con productos gourmet para darle un sabor distinto a tus recetas.",
+        "image": "curso02.webp",
+        "chef": "Guillermo Calabrese",
+        "categoryId":"c3"
+    },
+    {
+        "id" : 3,
+        "title" : "FIDEOS CON MANTECA Y QUESO",
+        "price" : 1030,
+        "description": "Tu comida puede transformarse en platos de restaurante de la mano de Guillermo Calabrese que te enseñará a combinar ingredientes simples con productos gourmet para darle un sabor distinto a tus recetas.",
+        "image": "curso04.webp",
+        "chef": "Juan Bernardini",
+        "categoryId":"c3"
+    },
+    {
+        "id" : 4,
+        "title" : "FIDEOS CON TUCO CURSO",
+        "price" : 130,
+        "description": "Tu comida puede transformarse en platos de restaurante de la mano de Guillermo Calabrese que te enseñará a combinar ingredientes simples con productos gourmet para darle un sabor distinto a tus recetas.",
+        "image": "curso04.webp",
+        "chef": "Juan Bernardini",
+        "categoryId":"c3"
+    }
+]

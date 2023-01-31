@@ -57,7 +57,9 @@
     background-color: var(--colorRojo);
    
 }
-
+.header__nav--menu2-li a{
+color: black;
+}
 /* tablet (768px) */
 @media (min-width: 768px) {
     .header__hamburger{

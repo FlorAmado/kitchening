@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products')
+const coursesRouter = require('./routes/courses')
 
 /* detras del require hay un module.exports
 ctrl + click y nos lleva a la ruta/enrrutador
@@ -34,7 +34,7 @@ sin ruta no hay medio de comunicacion entre ellas
 */
 app.use('/', indexRouter); //http://localhost:3000 esta url es interpretada por el servidor
 app.use('/users', usersRouter);//http://localhost:3000/users asi lo interpreta
-app.use('/products',productsRouter);//http://localhost:3030/products
+app.use('/courses',coursesRouter);//http://localhost:3030/products
 /*  veniamos trabajando asi
 app.use('/', (req,res)=> res.sendFile('rutas absolutas)) 
 
