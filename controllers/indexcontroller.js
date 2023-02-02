@@ -1,18 +1,21 @@
 
 const courses = require('../data/courses.json')
-const categories = require('../data/categories.json')
+
 
 module.exports = {
     home : (req, res) => {
-        /* toda la lógica!!! */
-        const {id} = req.params;
-        const course = courses.find(course => course.id === +id)
+        /* toda la lógica! */
+        /* const {id} = req.params;
+        const course = courses.find(course => course.id === +id) */
+        const newCourses = courses.filter(course => course.new);
+        const saleCourses = courses.filter(course => course.sale);
         
         return res.render('home',{
           title : "Kitchening | Home",
-          categories,
           courses,
-          id,
+          newCourses,
+          saleCourses,
+          /* id, */
         });
       }
 }

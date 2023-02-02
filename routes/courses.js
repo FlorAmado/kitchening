@@ -1,13 +1,17 @@
 const express =require('express');
 const router = express.Router();
 
-const {list,detail,category} = require('../controllers/coursesController')
+const {list,detail,add,edit} = require('../controllers/coursesController')
 
-/* /products */ /* courses */
+/* /courses */
 
-router.get('/list',list);
-router.get('/detail/:id',detail); // /courses/detail/+parametro obligatorio
+// /courses/detail/+parametro obligatorio
 //  http://localhost:3000/courses/detail/cocina/2
 // devuelve objetos con strings
-router.get('/category/:idCategory/:order?',category);
+router
+    .get('/list',list)
+    .get('/detail/:id',detail)
+    .get('/add',add)
+    .get('/edit/:id',edit)
+
 module.exports = router;

@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%- include('../partials/head') %> 
-<body>
-    <%- include('../partials/header') %> 
-     Detalle del curso <%= id  %> 
-    <div class="ps-content">
+<html lang="es">
 
-        <!-- Menu Section -->
-        <div class="ps-row ps-padding-64" id="menu">
-          <div class="ps-col l6 ps-padding-large">
-            <h1 class="ps-center"><%= course.title %> </h1>
-            <br />
-            <h4><%= course.description %></h4>
-        </div>
-        
-        <div class="ps-col l6 ps-padding-large ps-img-menu">
-            <img
-            src="/images/cursos/<%=course.image%>"
-            class="ps-round ps-image ps-opacity-min"
-            alt="Menu"
-            />
-        </div>
-        <p class="ps-text-grey">
-          U$S <%= course.price %> 
-        </p>
+<%- include('../partials/head',{
+    title: "Agregar Curso"
+}) %>
+
+  <body class="form">
+    <!-- encabezado -->
+    <%- include('../partials/header') %>
+
+      <!-- principal -->
+      <main class="form__main">
+     
+     <h2>Detalle del Curso</h2>
+     <hr>
+     <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="/images/courses/<%= image %>" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= title %></h5>
+                      <p class="card-text"><%= description %></p>
+                      <div class="d-flex gap-2">
+                        <a class="btn btn-success" href="/courses/edit/<%= id %>">Editar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
 
-    
-  
-    <%- include('../partials/footer') %> 
-  
-    <%- include('../partials/scripts') %> 
-</body>
+     </div>
+
+      </main>
+      <!-- pie de pagina -->
+
+      <%- include('../partials/footer') %>
+
+
+        <%- include('../partials/scripts') %>
+
+
+  </body>
+
 </html>

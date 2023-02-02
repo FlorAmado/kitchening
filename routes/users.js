@@ -9,7 +9,9 @@ const {register,login,profile} = require('../controllers/userController');
 /* ruta troncal que me lleva al enrrutador = 
                  /users 
 */
- 
+
+ /* /users */
+
 router.get('/register',register);
 router.get('/login',login);
 router.get('/profile',profile);
