@@ -202,5 +202,17 @@
       "newest": true,
       "free": false,
       "visible": true
+   },
+   {
+      "id": 18,
+      "title": "CARTA DE POSTRES",
+      "price": 9720,
+      "description": "El chef Patissier Gustavo Nari realiza cinco variedades de postres compuestos, con presentaciones modernas y una gran cantidad de técnicas aplicadas. Cada una de las recetas está integrada por varias elaboraciones para lograr el emplatado deseado.",
+      "image": null,
+      "chef": "Gustavo Nari",
+      "sale": true,
+      "newest": false,
+      "free": false,
+      "visible": true
    }
 ]

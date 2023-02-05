@@ -1,8 +1,9 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -12,7 +13,7 @@ const coursesRouter = require('./routes/courses')
 ctrl + click y nos lleva a la ruta/enrrutador
 */
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +24,7 @@ app.use(express.json());// estas lineas son necesarias para usar req.body
 app.use(express.urlencoded({ extended: false }));// estas lineas son necesarias para usar req.body, para q me llegue un objeto y poder parsear
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'))
 
 /* rutas 
 indexRouter y usersRouter son enrrutadores

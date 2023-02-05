@@ -1,7 +1,7 @@
 const express =require('express');
 const router = express.Router();
 
-const {list,detail,add,edit,store} = require('../controllers/coursesController')
+const {list,detail,add,edit,store,update} = require('../controllers/coursesController')
 
 /* /courses */
 
@@ -14,5 +14,6 @@ router
     .get('/add',add)
     .post('/add',store)
     .get('/edit/:id',edit)
+    .post('/update/:id',update)//reemplazar recurso con info dada
 
 module.exports = router;

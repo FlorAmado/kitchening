@@ -18,7 +18,9 @@
         <div class="col-12 col-md-8 mx-auto">
             <div class="card">
                 <div class="card-body">
-                    <form action="" class="row">
+                    <form action="/courses/update/<%= id %>?_method=PUT " class="row" method="post"><!-- acepta post o get -->
+                        <!-- necesito instalar $ npm i method-override y requerirla en app.js 
+                        todo lo q va despues de un ? es un query string-->
                         <div class="col-9 mb-3">
                             <label for="title" class="form-label">Título</label>
                             <input type="text" class="form-control" id="title" placeholder="Título del curso" name="title" value="<%= title %>">
