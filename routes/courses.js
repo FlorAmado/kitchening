@@ -1,19 +1,22 @@
 const express =require('express');
 const router = express.Router();
 
-const {list,detail,add,edit,store,update} = require('../controllers/coursesController')
+const {list,detail, add, edit, store, update, removeConfirm, remove} = require('../controllers/courseController');
+const { uploadCoursesImages } = require('../middlewares/upload');
+const addCourseValidator = require('../validations/addCourseValidator');
+const editCourseValidator = require('../validations/editCourseValidator');
 
 /* /courses */
 
-// /courses/detail/+parametro obligatorio
-//  http://localhost:3000/courses/detail/cocina/2
-// devuelve objetos con strings
 router
     .get('/list',list)
     .get('/detail/:id',detail)
     .get('/add',add)
-    .post('/add',store)
+    .post('/add',uploadCoursesImages, addCourseValidator, store)
     .get('/edit/:id',edit)
-    .post('/update/:id',update)//reemplazar recurso con info dada
+    .put('/update/:id',uploadCoursesImages, editCourseValidator, update)
+    .get('/remove/:id',removeConfirm)
+    .delete('/remove/:id',remove)
+
 
 module.exports = router;

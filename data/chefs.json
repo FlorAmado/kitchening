@@ -26,7 +26,7 @@
     },
     {
         "id" : 6,
-        "name" : "Hernan Perez Valasquez",
+        "name" : "Hernán Pérez Velásquez",
         "photo" : null
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "id" : 8,
-        "name" : "Silvia Di Clancio",
+        "name" : "Silvia Di Ciancio",
         "photo" : null
     },
     {
@@ -63,5 +63,16 @@
         "id" : 13,
         "name" : "Leandro Palmeiro",
         "photo" : null
+    },
+    {
+        "id" : 14,
+        "name" : "Olivier Falchi",
+        "photo" : null
+    },
+    {
+        "id" : 15,
+        "name" : "Luis Badillo",
+        "photo" : null
     }
 ]
+

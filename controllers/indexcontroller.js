@@ -1,21 +1,16 @@
-
-const courses = require('../data/courses.json')
-
+const courses = require('../data/courses.json');
 
 module.exports = {
     home : (req, res) => {
-        /* toda la lógica! */
-        /* const {id} = req.params;
-        const course = courses.find(course => course.id === +id) */
+        /* toda la lógica!!! */
         const newCourses = courses.filter(course => course.newest);
         const saleCourses = courses.filter(course => course.sale);
-        
+
         return res.render('home',{
-          title : "Kitchening | Home",
+          title : "Kitchening | HOME",
           courses,
           newCourses,
-          saleCourses,
-          /* id, */
+          saleCourses
         });
       }
 }
